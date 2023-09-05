@@ -6,9 +6,17 @@ import Home from "./Pages/Home/Homescreen";
 
 function App() {
   return (
-    <>
-    <Home />
-    </>
+    <div className="App">
+      <Router>
+        <div>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<div>404 Not Found</div>} />
+          </Routes>
+        </div>
+      </Router>
+    </div>
   )
 }
 
